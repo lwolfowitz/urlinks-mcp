@@ -1,0 +1,24 @@
+{
+  "name": "@urlinks/mcp-server",
+  "version": "0.3.0",
+  "description": "MCP server for URLinks — the AI-friendly URL shortener. Create shortlinks, get analytics, customize profile pages with AI-generated CSS, and more from any MCP-compatible AI agent.",
+  "keywords": ["mcp", "url-shortener", "shortlinks", "ai-tools", "claude-code"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@urlinks/profile-presets": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

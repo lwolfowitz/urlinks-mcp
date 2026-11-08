@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "me.urlinks/urlinks",
+  "title": "URLinks",
+  "description": "Create and manage short links, go links, QR codes, and link-in-bio pages, with click analytics.",
+  "version": "0.3.2",
+  "websiteUrl": "https://urlinks.me",
+  "repository": {
+    "url": "https://github.com/lwolfowitz/urlinks-mcp",
+    "source": "github",
+    "subfolder": "packages/mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://urlinks.me/favicon.png",
+      "mimeType": "image/png",
+      "sizes": ["200x200"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://urlinks.me/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your URLinks API key, sent as a bearer token.",
+          "value": "Bearer {api_key}",
+          "isRequired": true,
+          "isSecret": true,
+          "variables": {
+            "api_key": {
+              "description": "URLinks API key (starts with urk_). Create one in your URLinks dashboard settings.",
+              "placeholder": "urk_...",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

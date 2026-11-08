@@ -1,0 +1,13 @@
+{
+  "name": "urlinks-mcp",
+  "private": true,
+  "description": "Source of the URLinks MCP server tools, hosted at https://urlinks.me/api/mcp",
+  "license": "MIT",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "typecheck": "tsc -p packages/types --noEmit && tsc -p packages/profile-presets --noEmit && tsc -p packages/mcp-server --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
